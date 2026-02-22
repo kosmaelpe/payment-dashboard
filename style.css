@@ -32,13 +32,14 @@ flex: 1;
      border: #000000 solid 1px;
     border-radius: 5px;
     background-color: #fff;
+   
 }
 
 .header-bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 0px;
 }
 
 .lupa {
@@ -53,11 +54,12 @@ flex: 1;
     flex-direction: row;
     gap: 20px;
     margin: 20px;
-    padding: 20px;
+   
     border: #ddd solid 1px;
 }
 
 .price-1, .price-2, .price-3 {
+    font-weight: bold;
     flex: 1;
     padding: 20px;
     border: #000000 solid 1px;
@@ -65,20 +67,117 @@ flex: 1;
     background-color: #fff;
 }
 
+.price-title {
+display: flex;
+align-items: center;
+}
+
+.price-1 .price-title::before {
+    border-color: #478037; 
+}
+
+.price-2 .price-title::before {
+    border-color: #f5a623; 
+}
+
+.price-3 .price-title::before {
+    border-color: #e74c3c; 
+}
+
+.price-title::before {
+   content: '';
+align-items: center;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ffffff;
+   
+    border: solid 4px #478037;
+display: flex;
+margin-right: 5px;
+    
+}
+
+
+
 .trend-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;   
 }
 
+
+
+.trend {
+    font-size: small;
+    font-weight: 400;
+
+    background-color: rgba(71, 128, 55, 0.12);
+    border-radius: 999px;
+    color: #478037;
+    padding: 4px 10px;
+}
+
+.price-1 .trend {
+    background-color: #ddffd4;
+    color: #000000;
+}
+
+.price-2 .trend {
+    background-color: #ffdb9d;
+    color: #000000;
+}
+
+.price-3 .trend {
+    background-color: #ffcaca;
+    color: #000000;
+}
+
+
+
+.price-1 .trend-text {
+    color: #478037;
+}
+
+.price-2 .trend-text {
+
+color:#f5a623 ;
+}
+
+.price-3 .trend-text {color: #e74c3c; }
+    
+
 .progress-bar {
      display: flex;
-     margin-top: 20px;
+     margin-top: 10px;
     width: 100%;
     height: 6px;
-    background-color: #4e4c4c;
     border-radius: 10px;
     overflow: hidden;
+}
+
+.price-1 .progress-bar {
+    background-color: #edffcd;
+}
+
+.price-1 .progress-fill {
+    background-color: #478037;
+}
+
+.price-2 .progress-bar {
+    background-color: #ffe5b4;
+}
+
+.price-2 .progress-fill {
+    background-color: #f5a623;
+}
+
+.price-3 .progress-bar {
+    background-color: #ffb3b3;
+}
+
+.price-3 .progress-fill {
+    background-color: #e74c3c;
 }
 
 .progress-fill {
@@ -86,7 +185,111 @@ flex: 1;
     height: 100%;
     background-color: #478037;
     border-radius: 10px;
-    width: 70%;
+    width: 60%;
   
 
+}
+
+.price-1 .progress-fill {
+    width: 90%;
+}
+
+.price-2 .progress-fill {
+    width: 45%;
+}
+
+.price-3 .progress-fill {
+    width: 30%;
+}
+
+
+.stats-container {
+   display: flex;
+    flex-direction: row; 
+    gap: 20px;
+    width: 100%;
+    margin: 20px 0;
+    align-items: flex-start;
+}
+
+.stat-item {
+
+  background: white;
+    border: 1px solid #070707;
+    border-radius: 15px;
+    padding: 20px;
+  
+}
+
+.stat-item:first-child {
+    flex: 1;
+    min-width: 0;
+    border: solid #000000 1px;
+    padding: 25px;
+   
+}
+
+
+
+.stats-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+    min-width: 250px;
+}
+
+.stat-item:first-child img {
+    width: 90%;          
+    height: auto;          
+    display: block;   
+    border-radius: 15px;  
+
+
+}
+
+
+
+.stats-list {
+display: flex;
+flex-direction: column;
+   margin-top: 15px;
+   list-style: none;
+}
+
+.stats-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    border-bottom: solid 0.2px #a3a3a3;
+    padding-bottom: 10px;
+}
+
+.item-left {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.item-left::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+border: solid 6px #a2bac1;
+border-radius: 5px;
+    background-color: #ffffff;
+    margin-right: 5px;
+}
+
+.stats-list li:last-child {
+    border-bottom: none;
+}
+
+.number {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
 }
